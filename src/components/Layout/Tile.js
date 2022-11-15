@@ -1,7 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import styled from 'styled-components';
 
 function Title(props) {
   return (
@@ -14,5 +13,6 @@ function Title(props) {
 Title.propTypes = {
   children: PropTypes.node,
 };
+
 
 export default Title;
