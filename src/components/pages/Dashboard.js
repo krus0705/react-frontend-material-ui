@@ -17,6 +17,15 @@ import Content from '../Layout/Content';
 import ListItems from '../Layout/ListItems';
 import { mainListItems } from '../Layout/Slide';
 import {ContentStyle1, ContentStyle2, ContentStyle3} from '../Layout/Content.element';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+
+import Avatar from '@mui/material/Avatar';
+import logo from '../assets/logo.jpg';
+import { ImgStyleNormal, ImgStyleMin } from '../Layout/slide.element';
+import Tile from '../Layout/Tile';
 
 function Copyright(props) {
   return (
@@ -83,12 +92,15 @@ function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
+    setImg(!img);
   };
+
+  const [img, setImg] = React.useState(true);
 
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
-        <AppBar position="absolute" open={open}>
+      <Box sx={{ display: 'flex' }} >
+        <AppBar position="absolute" open={open} >
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -109,12 +121,20 @@ function DashboardContent() {
             <Typography
               component="h1"
               variant="h6"
-              color="inherit"
+              color="white"
               noWrap
               sx={{ flexGrow: 1 }}
             >
               Dashboard
             </Typography>
+            <Stack direction="row" spacing={2}>
+              <Button variant="outlined" color="secondary" endIcon={<DeleteIcon/>} style={{backgroundColor: 'white'}}>
+                Error
+              </Button>
+              <Button variant="outlined" color="success" startIcon={<SendIcon/>} style={{backgroundColor: 'white'}}>
+                Success
+              </Button>
+            </Stack>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
@@ -130,8 +150,11 @@ function DashboardContent() {
               <ChevronLeftIcon />
             </IconButton>
           </Toolbar>
-          <Divider />
           <List component="nav">
+            {
+              img ? <ImgStyleNormal><Avatar src={logo} alt="AndreyRojin" sx={{ width: 100, height: 100, marginLeft: 8}} /><Tile>Andrey Rojin</Tile></ImgStyleNormal> : 
+                <ImgStyleMin><Avatar src={logo} sx={{marginLeft: 1}}/></ImgStyleMin>
+            }
             {mainListItems}
             <Divider sx={{ my: 1 }} />
           </List>

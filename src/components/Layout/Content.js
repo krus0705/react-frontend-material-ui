@@ -9,13 +9,7 @@ function preventDefault(event) {
 
 export default function Content() {
   return (
-    <div
-      sx={{
-        p: 2,
-        display: 'flex',
-        flexDirection: 'column',
-        height: 240,
-      }}>
+    <React.Fragment>
       <Title>Recent Deposits</Title>
       <Typography component="p" variant="h4">
         $3,024.00
@@ -28,6 +22,6 @@ export default function Content() {
           View balance
         </Link>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
