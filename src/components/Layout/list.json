@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "first_name": "Prescott",
+      "last_name": "Radloff",
+      "email": "pradloff0@telegraph.co.uk",
+      "gender": "Male",
+      "logo": "../assets/31.jpg"
+    },
+    {
+      "id": 2,
+      "first_name": "Buddy",
+      "last_name": "Speere",
+      "email": "bspeere1@mail.ru",
+      "gender": "Male",
+      "logo": "../assets/62.jpg"
+    },
+    {
+      "id": 3,
+      "first_name": "Oates",
+      "last_name": "Kull",
+      "email": "okull2@bloglovin.com",
+      "gender": "Male",
+      "logo": "../assets/78.jpg"
+    },
+    {
+      "id": 4,
+      "first_name": "Alwyn",
+      "last_name": "Edney",
+      "email": "aedney3@nsw.gov.au",
+      "gender": "Male",
+      "logo": "../assets/81.jpg"
+    },
+    {
+      "id": 5,
+      "first_name": "Bernice",
+      "last_name": "Braywood",
+      "email": "bbraywood4@wordpress.org",
+      "gender": "Female",
+      "logo": "../assets/logo.jpg"
+    }
+  ]
+  
